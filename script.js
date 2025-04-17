@@ -3,7 +3,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// --- Global Animations (Don't depend on fetched content) ---
 function initGlobalAnimations() {
     gsap.from(".skill-card", {
         duration: 0.5,
@@ -32,7 +31,7 @@ const nextAppButton = document.getElementById('next-slide');
 const appCarouselContainer = document.querySelector('.app-carousel-container');
 
 function showAppSlide(index) {
-    if (!appSlides || appSlides.length === 0) return; // Guard clause
+    if (!appSlides || appSlides.length === 0) return;
 
     appSlides.forEach(slide => slide.classList.remove('active'));
 
@@ -48,14 +47,13 @@ function showAppSlide(index) {
 }
 
 function initAppCarousel() {
-    appSlides = appSlidesContainer.querySelectorAll('.app-slide'); // Find slides after loading
+    appSlides = appSlidesContainer.querySelectorAll('.app-slide');
     if (appSlides.length > 0) {
         nextAppButton.addEventListener('click', () => showAppSlide(currentAppSlide + 1));
         prevAppButton.addEventListener('click', () => showAppSlide(currentAppSlide - 1));
-        showAppSlide(0); // Show the first slide initially
+        showAppSlide(0);
         console.log("App carousel initialized!");
 
-        // Animate container after slides are loaded and carousel is ready
         gsap.from(appCarouselContainer, {
             duration: 0.8,
             opacity: 0,
@@ -72,7 +70,6 @@ function initAppCarousel() {
     }
 }
 
-// --- Web Carousel Logic ---
 let webSlides = [];
 let currentWebSlide = 0;
 const webSlidesContainer = document.querySelector('.web-carousel-slides');
@@ -96,14 +93,12 @@ function showWebSlide(index) {
 }
 
 function initWebCarousel() {
-    webSlides = webSlidesContainer.querySelectorAll('.web-slide'); // Find slides after loading
+    webSlides = webSlidesContainer.querySelectorAll('.web-slide');
     if (webSlides.length > 0) {
         nextWebButton.addEventListener('click', () => showWebSlide(currentWebSlide + 1));
         prevWebButton.addEventListener('click', () => showWebSlide(currentWebSlide - 1));
-        showWebSlide(0); // Show the first slide initially
+        showWebSlide(0);
         console.log("Web carousel initialized!");
-
-        // Animate container after slides are loaded and carousel is ready
         gsap.from(webCarouselContainer, {
             duration: 0.8,
             opacity: 0,

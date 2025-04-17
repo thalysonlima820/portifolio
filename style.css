@@ -1,4 +1,3 @@
-/* === Variáveis de Cor === */
 :root {
     --text-primary: #F9FAFB;
     --text-secondary: #D1D5DB;
@@ -16,7 +15,6 @@
     --font-family: 'Inter', sans-serif;
 }
 
-/* === Reset Básico & Estilos Globais === */
 * {
     margin: 0;
     padding: 0;
@@ -118,7 +116,6 @@ a:hover {
     color: var(--text-primary);
 }
 
-/* === Header === */
 header {
     background-color: var(--card-primary);
     padding: 30px 0;
@@ -136,8 +133,6 @@ header p {
     font-weight: 600;
 }
 
-
-/* === Seções === */
 section {
     margin-bottom: 40px;
 }
@@ -150,8 +145,6 @@ section {
     border-radius: 4px;
 }
 
-
-/* === Habilidades === */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -191,7 +184,6 @@ section {
     color: var(--text-secondary);
 }
 
-/* === Aplicativo (Carousel) === */
 #aplicativo h2 {
     text-align: center;
 }
@@ -209,7 +201,7 @@ section {
     margin: 0 auto;
     max-width: 900px; 
     overflow: hidden; 
-    min-height: 300px; /* Add min-height to prevent collapse while loading */
+    min-height: 300px;
 }
 
 .app-carousel-slides {
@@ -279,7 +271,6 @@ section {
     height: auto;
 }
 
-/* Estilos para o conteúdo dentro do foreignObject (placeholder) */
 .app-content {
     overflow: hidden;
 }
@@ -322,7 +313,6 @@ section {
 }
 
 
-/* Navegação do Carrossel */
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -362,7 +352,6 @@ section {
     stroke: var(--text-primary);
 }
 
-/* === Aplicativo Web (Novo Carrossel) === */
 #aplicativo-web h2 {
     text-align: center;
 }
@@ -380,7 +369,7 @@ section {
     margin: 0 auto;
     max-width: 1000px; 
     overflow: hidden;
-    min-height: 350px; /* Add min-height */
+    min-height: 350px;
 }
 
 .web-carousel-slides {
@@ -443,7 +432,6 @@ section {
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25));
 }
 
-/* Estilos para o conteúdo dentro do foreignObject (placeholder web) */
 .web-content {
     overflow: hidden;
 }
@@ -503,7 +491,6 @@ section {
     height: auto;
 }
 
-/* Navegação do Carrossel (Web) */
 .web-carousel-nav {
     position: absolute;
     top: 50%;
@@ -541,7 +528,6 @@ section {
     stroke: var(--text-primary);
 }
 
-/* === Contato === */
 #contato {
     text-align: center;
 }
@@ -563,7 +549,6 @@ section {
     transform: translateY(-2px);
 }
 
-/* === Footer === */
 footer {
     background-color: var(--card-primary);
     color: var(--text-secondary);
@@ -574,7 +559,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* === Responsividade === */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -586,7 +570,6 @@ footer {
         width: 95%;
     }
 
-    /* Ajustes no Carrossel */
     .app-slide {
         flex-direction: column; 
         gap: 1.5rem;
@@ -622,7 +605,6 @@ footer {
          background-color: var(--card-primary); 
      }
 
-    /* Ajustes no Carrossel Web */
     .web-slide {
         flex-direction: column;
         gap: 1.5rem;
@@ -663,7 +645,6 @@ footer {
          height: 20px;
      }
 
-    /* Remove .devices-container antigo */
     .devices-container { display: none; }
 
     .skills-grid {
@@ -671,10 +652,10 @@ footer {
     }
 
     .app-carousel-container {
-        min-height: 450px; /* Adjust based on content height */
+        min-height: 450px; 
     }
     .web-carousel-container {
-         min-height: 400px; /* Adjust based on content height */
+         min-height: 400px; 
     }
 }
 
@@ -683,7 +664,6 @@ footer {
      h2 { font-size: 1.5rem; }
      .skill-card { padding: 1.5rem; }
 
-    /* Ajustes finos no carrossel mobile */
     .slide-mockup {
         max-width: 150px; 
     }
@@ -693,7 +673,6 @@ footer {
      .slide-description h4 { font-size: 1.1rem; }
      .slide-description p { font-size: 0.85rem; }
 
-     /* Ajustes finos no carrossel web mobile */
       .slide-mockup-web {
           max-width: 90%; 
       }
@@ -706,19 +685,13 @@ footer {
       .slide-description-web p { font-size: 0.85rem; }
      .cta-button { padding: 10px 20px; font-size: 0.9rem; }
      .app-carousel-container {
-        min-height: 400px; /* Adjust based on content height */
+        min-height: 400px; 
     }
      .web-carousel-container {
-         min-height: 350px; /* Adjust based on content height */
+         min-height: 350px; 
      }
 }
 
-/* Remove estilos do .devices-container antigo que não são mais necessários */
-/* removed .devices-container styles */
-/* removed .device-laptop styles */
-/* removed .device-label styles */
-
-/* Loading Placeholder Style */
 .loading-placeholder {
     width: 100%;
     text-align: center;
