@@ -1,0 +1,686 @@
+/* === Variáveis de Cor === */
+:root {
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --background: #111827;
+    --card-primary: #1F2937;
+    --card-secondary: #2D3748;
+    --icon: #F9FAFB;
+    --vermelho: #D32F2F;
+    --verde: #388E3C;
+    --amarelo: #92400E;
+    --loading: #6B46C1;
+    --tint: #6366F1; 
+    --tint-darker: #4f46e5; 
+
+    --font-family: 'Inter', sans-serif;
+}
+
+/* === Reset Básico & Estilos Globais === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--tint);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: var(--tint);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-primary);
+}
+
+/* === Header === */
+header {
+    background-color: var(--card-primary);
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--card-secondary);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--tint);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* === Seções === */
+section {
+    margin-bottom: 40px;
+}
+
+#sobre .highlight {
+    color: var(--tint);
+    font-weight: 600;
+    background-color: rgba(99, 102, 241, 0.1); 
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+}
+
+
+/* === Habilidades === */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: var(--card-primary);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--card-secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    stroke: var(--tint);
+    margin: 0 auto 1rem auto;
+    display: block;
+}
+
+.skill-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* === Aplicativo (Carousel) === */
+#aplicativo h2 {
+    text-align: center;
+}
+
+#aplicativo > p { 
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem; 
+}
+
+.app-carousel-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px; 
+    overflow: hidden; 
+    min-height: 300px; /* Add min-height to prevent collapse while loading */
+}
+
+.app-carousel-slides {
+    display: flex; 
+    width: 100%; 
+}
+
+.app-slide {
+    display: flex; 
+    align-items: center; 
+    gap: 2rem; 
+    padding: 1rem; 
+    flex: 0 0 100%; 
+    opacity: 0; 
+    visibility: hidden; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+}
+
+.app-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative; 
+}
+
+.slide-mockup {
+    flex-basis: 35%; 
+    flex-shrink: 0; 
+    display: flex;
+    justify-content: center;
+}
+
+.slide-description {
+    flex-basis: 65%; 
+    text-align: left;
+}
+
+.slide-description h4 {
+    color: var(--tint);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.slide-description p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.device {
+    text-align: center;
+}
+
+.device-svg {
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25)); 
+}
+
+.device-phone .device-svg {
+    width: 160px; 
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para o conteúdo dentro do foreignObject (placeholder) */
+.app-content {
+    overflow: hidden;
+}
+
+.app-placeholder {
+    width: 100%;
+    height: 100%;
+}
+.app-placeholder h4 {
+    font-size: 0.9rem;
+    color: var(--tint);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.app-placeholder p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+.app-placeholder button {
+    background-color: var(--tint);
+    color: var(--text-primary);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; 
+    margin: 10px auto 0 auto; 
+    width: fit-content;
+}
+.app-placeholder button:hover {
+    background-color: var(--tint-darker);
+}
+.app-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Navegação do Carrossel */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0px; 
+    pointer-events: none; 
+}
+
+.carousel-nav button {
+    background-color: rgba(31, 41, 55, 0.7); 
+    border: 1px solid var(--card-secondary);
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    pointer-events: auto; 
+    margin: 0 -10px; 
+}
+
+.carousel-nav button:hover {
+    background-color: var(--card-primary);
+    transform: scale(1.1);
+}
+
+.carousel-nav button svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-primary);
+}
+
+/* === Aplicativo Web (Novo Carrossel) === */
+#aplicativo-web h2 {
+    text-align: center;
+}
+
+#aplicativo-web > p {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.web-carousel-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px; 
+    overflow: hidden;
+    min-height: 350px; /* Add min-height */
+}
+
+.web-carousel-slides {
+    display: flex;
+    width: 100%;
+}
+
+.web-slide {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex: 0 0 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.web-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.slide-mockup-web {
+    flex-basis: 60%; 
+    flex-shrink: 0; 
+    display: flex;
+    justify-content: center;
+}
+
+.slide-description-web {
+    flex-basis: 40%;
+    text-align: left;
+}
+
+.slide-description-web h4 {
+    color: var(--tint);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.slide-description-web p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.device-laptop .device-svg-web {
+    width: 90%; 
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25));
+}
+
+/* Estilos para o conteúdo dentro do foreignObject (placeholder web) */
+.web-content {
+    overflow: hidden;
+}
+
+.web-placeholder {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    background-color: var(--background);
+    box-sizing: border-box;
+    overflow: hidden; 
+    font-size: 0.85rem; 
+    line-height: 1.4;
+}
+.web-placeholder h3 {
+    font-size: 1.1rem;
+    color: var(--tint);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.web-placeholder h4 { 
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.web-placeholder p {
+    font-size: 0.9em; 
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+.web-placeholder button,
+.web-placeholder input[type="submit"] {
+    background-color: var(--tint);
+    color: var(--text-primary);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.web-placeholder button:hover,
+.web-placeholder input[type="submit"]:hover {
+    background-color: var(--tint-darker);
+}
+.web-placeholder a {
+    color: var(--tint);
+    text-decoration: none;
+}
+.web-placeholder a:hover {
+    text-decoration: underline;
+}
+.web-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navegação do Carrossel (Web) */
+.web-carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px; 
+    pointer-events: none;
+}
+
+.web-carousel-nav button {
+    background-color: rgba(31, 41, 55, 0.7);
+    border: 1px solid var(--card-secondary);
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 45px; 
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    pointer-events: auto;
+    margin: 0 -15px; 
+}
+.web-carousel-nav button:hover {
+    background-color: var(--card-primary);
+    transform: scale(1.1);
+}
+.web-carousel-nav button svg {
+    width: 24px; 
+    height: 24px;
+    stroke: var(--text-primary);
+}
+
+/* === Contato === */
+#contato {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--tint);
+    color: var(--text-primary);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: var(--tint-darker); 
+    transform: translateY(-2px);
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--card-primary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; 
+    border-top: 1px solid var(--card-secondary);
+    font-size: 0.9rem;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .container {
+        width: 95%;
+    }
+
+    /* Ajustes no Carrossel */
+    .app-slide {
+        flex-direction: column; 
+        gap: 1.5rem;
+        text-align: center; 
+    }
+    .slide-mockup {
+        flex-basis: auto; 
+        width: 100%; 
+        max-width: 200px; 
+        margin: 0 auto; 
+    }
+     .slide-description {
+        flex-basis: auto; 
+        text-align: center; 
+        padding: 0 1rem; 
+    }
+     .slide-description h4 {
+        font-size: 1.2rem;
+    }
+     .slide-description p {
+        font-size: 0.9rem;
+    }
+
+     .carousel-nav {
+        position: static; 
+        transform: none; 
+        margin-top: 1.5rem; 
+        justify-content: center; 
+        gap: 1rem; 
+    }
+     .carousel-nav button {
+         margin: 0; 
+         background-color: var(--card-primary); 
+     }
+
+    /* Ajustes no Carrossel Web */
+    .web-slide {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+     .slide-mockup-web {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 450px; 
+        margin: 0 auto;
+    }
+     .slide-description-web {
+        flex-basis: auto;
+        text-align: center;
+        padding: 0 1rem;
+    }
+     .slide-description-web h4 {
+        font-size: 1.2rem;
+    }
+     .slide-description-web p {
+        font-size: 0.9rem;
+    }
+    .web-carousel-nav {
+         position: static;
+        transform: none;
+        margin-top: 1.5rem;
+        justify-content: center;
+        gap: 1rem;
+    }
+     .web-carousel-nav button {
+         margin: 0;
+         background-color: var(--card-primary);
+         width: 40px;
+         height: 40px;
+     }
+     .web-carousel-nav button svg {
+         width: 20px;
+         height: 20px;
+     }
+
+    /* Remove .devices-container antigo */
+    .devices-container { display: none; }
+
+    .skills-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .app-carousel-container {
+        min-height: 450px; /* Adjust based on content height */
+    }
+    .web-carousel-container {
+         min-height: 400px; /* Adjust based on content height */
+    }
+}
+
+@media (max-width: 480px) {
+     h1 { font-size: 1.8rem; }
+     h2 { font-size: 1.5rem; }
+     .skill-card { padding: 1.5rem; }
+
+    /* Ajustes finos no carrossel mobile */
+    .slide-mockup {
+        max-width: 150px; 
+    }
+    .device-phone .device-svg {
+        width: 130px;
+    }
+     .slide-description h4 { font-size: 1.1rem; }
+     .slide-description p { font-size: 0.85rem; }
+
+     /* Ajustes finos no carrossel web mobile */
+      .slide-mockup-web {
+          max-width: 90%; 
+      }
+      .device-laptop .device-svg-web {
+         max-width: 100%;
+         filter: drop-shadow(0 5px 8px rgba(0,0,0,0.2)); 
+     }
+      .web-placeholder { font-size: 0.75rem; } 
+      .slide-description-web h4 { font-size: 1.1rem; }
+      .slide-description-web p { font-size: 0.85rem; }
+     .cta-button { padding: 10px 20px; font-size: 0.9rem; }
+     .app-carousel-container {
+        min-height: 400px; /* Adjust based on content height */
+    }
+     .web-carousel-container {
+         min-height: 350px; /* Adjust based on content height */
+     }
+}
+
+/* Remove estilos do .devices-container antigo que não são mais necessários */
+/* removed .devices-container styles */
+/* removed .device-laptop styles */
+/* removed .device-label styles */
+
+/* Loading Placeholder Style */
+.loading-placeholder {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-secondary);
+    font-style: italic;
+}

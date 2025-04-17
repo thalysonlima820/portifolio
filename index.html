@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <p>Desenvolvedor Full Stack</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou um programador apaixonado por tecnologia, com experiência em desenvolvimento backend com <span class="highlight">Node.js</span>, criação de aplicativos móveis com <span class="highlight">React Native</span> e <span class="highlight">análise de banco de dados</span>. Busco sempre criar soluções eficientes e escaláveis.</p>
+        </section>
+
+        <section id="habilidades" class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                    </svg>
+                    <h3>Node.js</h3>
+                    <p>Desenvolvimento de APIs RESTful, microserviços e aplicações backend robustas.</p>
+                </div>
+                <div class="skill-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                    <h3>React Native</h3>
+                    <p>Criação de aplicativos móveis multiplataforma (iOS e Android) com interfaces nativas.</p>
+                </div>
+                 <div class="skill-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                    </svg>
+                    <h3>Banco de Dados</h3>
+                    <p>Modelagem, otimização de consultas e análise de dados em bancos relacionais e NoSQL.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aplicativo" class="container">
+            <h2>Meu Aplicativo</h2>
+            <p>Conheça algumas telas e funcionalidades chave do meu aplicativo.</p>
+
+            <div class="app-carousel-container">
+                <div class="app-carousel-slides">
+                    <div class="loading-placeholder">Carregando slides do aplicativo...</div>
+                </div><!-- /app-carousel-slides -->
+
+                <div class="carousel-nav">
+                    <button id="prev-slide" aria-label="Slide Anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button id="next-slide" aria-label="Próximo Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div><!-- /app-carousel-container -->
+
+        </section>
+
+        <section id="aplicativo-web" class="container">
+            <h2>Versão Web</h2>
+            <p>Explore a interface e funcionalidades da versão desktop/web do aplicativo.</p>
+
+            <div class="web-carousel-container">
+                <div class="web-carousel-slides">
+                    <div class="loading-placeholder">Carregando slides da web...</div>
+                </div><!-- /web-carousel-slides -->
+
+                <div class="carousel-nav web-carousel-nav">
+                    <button id="prev-web-slide" aria-label="Slide Anterior (Web)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button id="next-web-slide" aria-label="Próximo Slide (Web)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" >
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div><!-- /web-carousel-container -->
+
+        </section>
+
+        <section id="contato" class="container">
+             <h2>Contato</h2>
+             <p>Interessado em colaborar? Entre em contato!</p>
+             <a href="mailto:seuemail@exemplo.com" class="cta-button">Enviar Email</a>
+             <!-- Adicione links para redes sociais se desejar -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+        "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js"
+      }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
