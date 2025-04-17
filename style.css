@@ -68,6 +68,11 @@ body {
     color: transparent;
     -webkit-text-stroke: 1.5px #eae1cf;
 }
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 70px;
+    }
+  }
 
 .hero-subtitle {
     margin-top: 50px;
@@ -77,7 +82,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
 
 h1, h2, h3 {
     color: var(--text-primary);
