@@ -1,261 +1,374 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thalyson Lima | Portfólio</title>
-    <meta
-      name="description"
-      content="Portfólio de Thalyson Lima — Desenvolvedor Full Stack com foco em Node.js, NestJS, React, integrações corporativas, Oracle SQL e automações via Telegram."
-    />
-    <link rel="icon" type="image/png" href="./img/lg.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thalyson Lima | Full Stack Developer</title>
 
-  <body>
-    <header class="hero-header">
-      <div class="hero-content">
-        <h1 class="hero-title">PORT<span>FÓLIO</span></h1>
-        <p class="hero-subtitle">
-          Desenvolvedor Full Stack • Backend (NestJS/Node) • React • Oracle SQL
-        </p>
-      </div>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
 
-    <main>
-      <section id="sobre" class="container">
-        <h2>Sobre Mim</h2>
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo">THALYSON<span>.</span></a>
 
-        <p>
-          Sou <strong>Desenvolvedor Full Stack</strong> com foco em
-          <span class="highlight">backend</span> e
-          <span class="highlight">sistemas corporativos</span>. Trabalho com
-          <span class="highlight">Node.js</span>,
-          <span class="highlight">NestJS</span>,
-          <span class="highlight">TypeScript</span> e
-          <span class="highlight">React</span>, construindo APIs REST escaláveis,
-          automações e dashboards orientados a dados.
-        </p>
+      <nav class="menu" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Stack</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
 
-        <p>
-          Meu projeto atual é um sistema de gestão (ADM Gestão) utilizado em
-          ambiente <strong>multi-filiais</strong>, com integração ao
-          <strong>WinThor (Oracle SQL)</strong>, rotinas automáticas, relatórios e
-          alertas em tempo real via <strong>Telegram</strong>.
-        </p>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-        <div class="about-highlights" aria-label="Destaques de stack e experiência">
-          <div class="about-pill">APIs REST • NestJS/Node</div>
-          <div class="about-pill">Oracle SQL • WinThor</div>
-          <div class="about-pill">React • Dashboards</div>
-          <div class="about-pill">Automação • Telegram</div>
-          <div class="about-pill">Dados • Indicadores</div>
-          <div class="about-pill">Segurança • Boas práticas</div>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <span class="tag">FULL STACK DEVELOPER • WEB • MOBILE • BACKEND</span>
+
+          <h1>
+            Desenvolvo <span>sites</span>, <span>aplicativos</span> e
+            <span>sistemas completos</span> que unem performance,
+            segurança e resultado real.
+          </h1>
+
+          <p>
+            Sou <strong>Thalyson Lima</strong>, desenvolvedor com atuação em
+            <strong>frontend, backend, mobile, análise de sistemas, automação de processos
+            e arquitetura de dados</strong>. Trabalho com
+            <strong>React, React Native, Node.js, NestJS, SQL, PostgreSQL e Oracle</strong>,
+            criando soluções que conectam interface moderna, regras de negócio sólidas,
+            banco de dados e integrações corporativas.
+          </p>
+
+          <p class="hero-highlight">
+            Desenvolvo desde aplicações web e mobile até APIs seguras com
+            <strong>JWT, criptografia, permissões de acesso, proteção de dados</strong>
+            e geração de <strong>relatórios automáticos por e-mail e Telegram</strong>.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn btn-primary magnetic">Ver projetos</a>
+            <a href="./public/curriculo.pdf" class="btn btn-outline magnetic" download>
+              Baixar currículo
+            </a>
+          </div>
+
+          <div class="hero-mini-cards">
+            <div class="mini-card">
+              <strong data-counter="10">0</strong>
+              <span>Experiência com operações e sistemas reais</span>
+            </div>
+            <div class="mini-card">
+              <strong data-counter="16">0</strong>
+              <span>Web, backend e mobile integrados</span>
+            </div>
+            <div class="mini-card">
+              <strong data-counter="100">0</strong>
+              <span>Foco em performance e segurança</span>
+            </div>
+          </div>
         </div>
 
-        <p class="about-note">
-          Atualmente, estou expandindo meus conhecimentos com
-          <strong>Python</strong> para automações e análise de dados, aproveitando
-          minha base sólida em arquitetura, APIs e sistemas.
-        </p>
-      </section>
+        <div class="hero-visual reveal delay-1">
+          <div class="profile-card floating">
+            <div class="profile-top">
+              <div class="status-dot"></div>
+              <span>Disponível para projetos</span>
+            </div>
 
-      <section id="curriculo" class="container">
-        <a href="./public/curriculo.pdf" download target="_blank" class="cv-link">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            style="vertical-align: middle"
-          >
-            <path
-              stroke="none"
-              d="M12 16l4-5h-3V4h-2v7H8zM5 18h14v2H5z"
-            />
-          </svg>
-          Baixar Currículo
-        </a>
-      </section>
+            <h3>Especialidades</h3>
 
-      <section id="habilidades" class="container">
-        <h2>Habilidades</h2>
+            <div class="stack-icons">
+              <div class="stack-badge">
+                <i class="devicon-react-original"></i>
+                <span>React</span>
+              </div>
 
-        <div class="skills-grid">
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-            </svg>
-            <h3>Node.js</h3>
-            <p>APIs REST, integrações e serviços backend com foco em performance e confiabilidade.</p>
+              <div class="stack-badge">
+                <i class="devicon-react-original"></i>
+                <span>React Native</span>
+              </div>
+
+              <div class="stack-badge">
+                <i class="devicon-nodejs-plain"></i>
+                <span>Node.js</span>
+              </div>
+
+              <div class="stack-badge">
+                <i class="devicon-nestjs-plain"></i>
+                <span>NestJS</span>
+              </div>
+
+              <div class="stack-badge">
+                <i class="devicon-postgresql-plain"></i>
+                <span>PostgreSQL</span>
+              </div>
+
+              <div class="stack-badge">
+                <i class="devicon-oracle-original"></i>
+                <span>Oracle</span>
+              </div>
+            </div>
+
+            <div class="code-lines">
+              <span>✔ Frontend moderno e responsivo</span>
+              <span>✔ APIs seguras e escaláveis</span>
+              <span>✔ Apps mobile com ótima experiência</span>
+              <span>✔ Banco de dados, integrações e automações</span>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
-            </svg>
-            <h3>NestJS</h3>
-            <p>Arquitetura modular, controllers/services, validações, rotas e automações (cron jobs).</p>
-          </div>
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="section-tag">SOBRE MIM</span>
+          <h2>Mais do que código: eu construo soluções para problemas reais.</h2>
+          <p>
+            Atuo no desenvolvimento de sistemas completos, conectando
+            <strong>interface, regras de negócio, banco de dados, integrações,
+            segurança, automação e experiência do usuário</strong>.
+          </p>
+        </div>
 
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5A2.25 2.25 0 0 0 8.25 22.5h7.5A2.25 2.25 0 0 0 18 20.25V3.75A2.25 2.25 0 0 0 15.75 1.5H13.5m-3 0V3h3V1.5" />
-            </svg>
+        <div class="about-grid">
+          <article class="glass-card reveal tilt-card">
+            <h3>Backend & APIs</h3>
+            <p>
+              Desenvolvimento de APIs robustas com
+              <strong>Node.js e NestJS</strong>, autenticação com
+              <strong>JWT</strong>, validações, permissões por usuário e rota,
+              criptografia e foco em segurança da informação.
+            </p>
+          </article>
+
+          <article class="glass-card reveal delay-1 tilt-card">
+            <h3>Frontend & Mobile</h3>
+            <p>
+              Criação de interfaces modernas com <strong>React</strong> e
+              aplicativos com <strong>React Native</strong>, buscando performance,
+              usabilidade, clareza visual e uma experiência realmente boa para o usuário.
+            </p>
+          </article>
+
+          <article class="glass-card reveal delay-2 tilt-card">
+            <h3>Dados & Automação</h3>
+            <p>
+              Experiência com <strong>SQL, PostgreSQL e Oracle</strong>, arquitetura
+              de dados, análise de sistemas, automação de tarefas e relatórios automáticos
+              enviados por <strong>e-mail e Telegram</strong>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="section-tag">MINHA STACK</span>
+          <h2>Tecnologias que uso para transformar ideia em produto.</h2>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal tilt-card">
+            <i class="devicon-react-original colored"></i>
             <h3>React</h3>
-            <p>Dashboards e interfaces administrativas com boa UX e foco em produtividade.</p>
+            <p>Interfaces web modernas, rápidas e escaláveis.</p>
           </div>
 
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5" />
-            </svg>
+          <div class="tech-card reveal delay-1 tilt-card">
+            <i class="devicon-react-original colored"></i>
             <h3>React Native</h3>
-            <p>Apps mobile multiplataforma (iOS/Android) com foco em fluidez e simplicidade.</p>
+            <p>Aplicativos mobile fluidos, bonitos e integrados com APIs reais.</p>
           </div>
 
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" />
-            </svg>
-            <h3>Oracle SQL (WinThor)</h3>
-            <p>Consultas avançadas, indicadores, relatórios e integração com ERP em produção.</p>
+          <div class="tech-card reveal delay-2 tilt-card">
+            <i class="devicon-nodejs-plain colored"></i>
+            <h3>Node.js</h3>
+            <p>Backend performático para integrações, regras de negócio e automações.</p>
           </div>
 
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 22.5a9.75 9.75 0 1 0 0-19.5 9.75 9.75 0 0 0 0 19.5Z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75v5.25l3.5 2" />
-            </svg>
-            <h3>Automação & Alertas</h3>
-            <p>Rotinas automáticas, relatórios e notificações via Telegram para operação do dia a dia.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="aplicativo" class="container">
-        <h2>Meu Aplicativo (Mobile)</h2>
-        <p>
-          Algumas telas e funcionalidades do app — focado em operação, indicadores e ações rápidas.
-        </p>
-
-        <div class="app-carousel-container" aria-label="Carrossel do aplicativo">
-          <div class="app-carousel-slides">
-            <div class="loading-placeholder">Carregando slides do aplicativo...</div>
+          <div class="tech-card reveal tilt-card">
+            <i class="devicon-nestjs-plain colored"></i>
+            <h3>NestJS</h3>
+            <p>Arquitetura organizada, segura, escalável e preparada para crescer.</p>
           </div>
 
-          <div class="carousel-nav">
-            <button id="prev-slide" aria-label="Slide anterior">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-
-            <button id="next-slide" aria-label="Próximo slide">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
+          <div class="tech-card reveal delay-1 tilt-card">
+            <i class="devicon-postgresql-plain colored"></i>
+            <h3>PostgreSQL</h3>
+            <p>Banco relacional sólido para aplicações modernas e estruturadas.</p>
           </div>
 
-          <div class="carousel-dots" id="app-dots" aria-label="Navegação por pontos do carrossel"></div>
-        </div>
-      </section>
-
-      <section id="aplicativo-web" class="container">
-        <h2>Versão Web</h2>
-        <p>Interface desktop/web com foco em análise, produtividade e tomada de decisão.</p>
-
-        <div class="web-carousel-container" aria-label="Carrossel da versão web">
-          <div class="web-carousel-slides">
-            <div class="loading-placeholder">Carregando slides da web...</div>
-          </div>
-
-          <div class="carousel-nav web-carousel-nav">
-            <button id="prev-web-slide" aria-label="Slide anterior (web)">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-
-            <button id="next-web-slide" aria-label="Próximo slide (web)">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="carousel-dots" id="web-dots" aria-label="Navegação por pontos do carrossel web"></div>
-        </div>
-      </section>
-
-      <section id="notificacoes" class="container">
-        <h2>Notificações via Telegram</h2>
-
-        <div class="skills-grid">
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18M7 16v-4m4 4V8m4 8v-2" />
-            </svg>
-            <h3>Resumo Diário de Vendas</h3>
-            <p>Envio automático com resumo do dia anterior por loja ou consolidado.</p>
-          </div>
-
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0 3.75h.008v.008H12V16.5zm10.125-2.625a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h3>Alerta de Margem</h3>
-            <p>Notificações quando produtos ficam abaixo da margem mínima configurada.</p>
-          </div>
-
-          <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="skill-icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-            <h3>Alertas Financeiros</h3>
-            <p>Conciliação, contas a pagar, títulos vencidos e alertas importantes direto no Telegram.</p>
+          <div class="tech-card reveal delay-2 tilt-card">
+            <i class="devicon-oracle-original colored"></i>
+            <h3>Oracle</h3>
+            <p>Experiência com banco corporativo e integração com ambiente WinThor.</p>
           </div>
         </div>
-      </section>
-
-      <section id="contato" class="container">
-        <h2>Contato</h2>
-        <p>Quer conversar sobre uma vaga ou projeto? Me chama.</p>
-        <a href="mailto:thalysonlima820@gmail.com" class="cta-button">Enviar Email</a>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container" style="text-align: center">
-        <p>&copy; 2026 Thalyson Lima.</p>
-        <p class="footer-links">
-          <a href="https://www.instagram.com/thalyson.lm/" target="_blank" rel="noreferrer">
-            Instagram
-          </a>
-          <span class="sep">•</span>
-          <a href="https://github.com/thalysonlima820" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </p>
       </div>
-    </footer>
+    </section>
 
-    <script type="importmap">
-      {
-        "imports": {
-          "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
-          "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js"
-        }
-      }
-    </script>
-    <script type="module" src="script.js"></script>
-  </body>
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="section-tag">PROJETOS</span>
+          <h2>Projetos que representam minha visão técnica e prática.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured reveal tilt-card">
+            <div class="project-header">
+              <span class="project-badge">PROJETO PRINCIPAL</span>
+              <h3>ADM Gestão</h3>
+            </div>
+
+            <p>
+              Sistema completo com <strong>site administrativo e aplicativo mobile</strong>,
+              criado para centralizar processos internos, consultas, indicadores,
+              relatórios e automações voltadas para operação e gestão.
+            </p>
+
+            <p>
+              No <strong>backend</strong>, desenvolvi a estrutura com <strong>NestJS</strong>,
+              aplicando arquitetura organizada, autenticação com <strong>JWT</strong>,
+              controle de <strong>permissões por usuário e rota</strong>,
+              além de recursos voltados para <strong>criptografia, segurança de dados
+              e proteção da informação</strong>.
+            </p>
+
+            <p>
+              O projeto também conta com integração com <strong>Oracle</strong> em ambiente
+              corporativo mapeado com <strong>WinThor</strong>, além de relatórios automáticos
+              e notificações enviadas por <strong>Telegram e e-mail</strong>, conectando
+              backend, banco de dados, web e mobile em uma única solução.
+            </p>
+
+            <div class="project-stack">
+              <span><i class="devicon-react-original"></i> React</span>
+              <span><i class="devicon-react-original"></i> React Native</span>
+              <span><i class="devicon-nestjs-plain"></i> NestJS</span>
+              <span><i class="devicon-oracle-original"></i> Oracle</span>
+              <span><i class="devicon-nodejs-plain"></i> JWT & Segurança</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1 tilt-card">
+            <div class="project-header">
+              <span class="project-badge">PARCERIA</span>
+              <h3>Biasi iGreen</h3>
+            </div>
+
+            <p>
+              Projeto desenvolvido com <strong>React</strong>, focado em uma presença
+              digital moderna, clara e confiável para apresentar a proposta da parceria
+              Biasi iGreen com uma interface forte, responsiva e visualmente marcante.
+            </p>
+
+            <div class="project-stack">
+              <span><i class="devicon-react-original"></i> React</span>
+              <span><i class="devicon-html5-plain"></i> UI Responsiva</span>
+              <span><i class="devicon-css3-plain"></i> Visual moderno</span>
+            </div>
+
+            <a
+              href="https://energia.grupobiasi.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Acessar projeto
+            </a>
+          </article>
+
+          <article class="project-card reveal delay-2 tilt-card">
+            <div class="project-header">
+              <span class="project-badge">PREFEITURA</span>
+              <h3>Juíta</h3>
+            </div>
+
+            <p>
+              Projeto que estou criando com <strong>site e aplicativo</strong>, unindo
+              <strong>React, React Native, NestJS e PostgreSQL</strong> para entregar
+              uma solução moderna, escalável e preparada para atender o público
+              tanto no web quanto no mobile.
+            </p>
+
+            <p>
+              É um projeto onde estou trabalhando identidade digital, estrutura do sistema,
+              comunicação visual e integração entre frontend, backend e banco de dados.
+            </p>
+
+            <div class="project-stack">
+              <span><i class="devicon-react-original"></i> React</span>
+              <span><i class="devicon-react-original"></i> React Native</span>
+              <span><i class="devicon-nestjs-plain"></i> NestJS</span>
+              <span><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+            </div>
+
+            <a
+              href="https://thunderous-zabaione-de65cb.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Acessar projeto
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-box reveal">
+          <span class="section-tag">CONTATO</span>
+          <h2>Vamos construir algo grande juntos.</h2>
+          <p>
+            Seja para site, app, sistema interno, automação, integração, dashboard
+            ou estrutura completa de backend, banco de dados e relatórios.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:thalysonlima820@gmail.com" class="btn btn-primary magnetic">
+              thalysonlima820@gmail.com
+            </a>
+            <a href="./public/curriculo.pdf" class="btn btn-outline magnetic" download>
+              Baixar currículo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
